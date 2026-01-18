@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلويات أبو مأمون</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blood-red: #800000; /* دم الغزال */
+            --liver-color: #4b0002; /* كبدي */
+            --deep-blue: #001a33; /* أزرق غامق */
+            --gold-glow: #ffcc00; /* ضوء ذهبي */
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--deep-blue);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--blood-red);
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold-glow);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+        }
+
+        /* شريط العنوان المتحرك ببطء شديد */
+        .scrolling-container {
+            background-color: var(--liver-color);
+            padding: 12px 0;
+            border-bottom: 2px solid var(--gold-glow);
+            overflow: hidden;
+        }
+
+        .moving-text {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 1.4rem;
+            color: var(--gold-glow);
+            text-shadow: 0 0 10px var(--gold-glow);
+            animation: moveText 30s linear infinite; /* سرعة بطيئة جداً */
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* شبكة الصور (10 صناديق) */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, var(--deep-blue), var(--liver-color));
+        }
+
+        .photo-box {
+            background-color: var(--blood-red);
+            border: 3px solid var(--gold-glow);
+            border-radius: 15px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .photo-box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px var(--gold-glow);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            background-color: #333; /* لون مؤقت مكان الصورة */
+        }
+
+        .photo-box .label {
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* تذييل المهندس */
+        footer {
+            background-color: #000;
+            color: #00d4ff;
+            text-align: center;
+            padding: 30px;
+            border-top: 3px solid #00d4ff;
+        }
+
+        .engineer-info {
+            font-size: 1.3rem;
+            text-shadow: 0 0 10px #00d4ff;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            background: #005f73;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>حلويات أبو مأمون</h1>
+        <p style="color: var(--gold-glow);">✨ عنوان التميز في عالم الحلويات ✨</p>
+    </header>
+
+    <div class="scrolling-container">
+        <div class="moving-text">
+            📍 العنوان: العند - المثلث - أمام سوق القات . . . جودة لا تضاهى وأسعار تنافس الجميع . . . أهلاً وسهلاً بكم 📍
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="photo-box">
+                <img src="hlo1.jpg" alt="صورة الصنف 4">
+            <div class="label">صنف رقم 1</div>
+        </div>
+        <div class="photo-box">
+            <img src="hl2.jpg" alt="صورة الصنف 4">
+            <div class="label">صنف رقم 2</div>
+        </div>
+        <div class="photo-box">
+            <img src="hlo3.jpg" alt="صورة الصنف 4">
+            <div class="label">صنف رقم 3</div>
+        </div>
+        <div class="photo-box">
+    <img src="hlo4.jpg" alt="صورة الصنف 4">
+            <div class="label">صنف رقم 4</div>
+        </div>
+        
+        <div class="photo-box">
+            <img src="hlo5.jpg" alt="صورة الصنف 4">
+            <div class="label">صنف رقم 5</div>
+        </div>
+        <div class="photo-box">
+            <img src="hlo6.jpg" alt="صورة الصنف 4">
+            <div class="label">صنف رقم 6</div>
+        </div>
+        <div class="photo-box">
+            <img src="" alt="ضع صورة الصنف 7 هنا">
+            <img src="hlo8.jpg" alt="صورة الصنف 4">
+        </div>
+     
+      
+    <footer>
+        <div class="engineer-info">💻 تصميم المهندس أبو هولفيرا</div>
+        <div>
+            للتواصل: 
+            <a href="tel:770914162" class="contact-btn">770914162</a>
+        </div>
+    </footer>
+
+</body>
+</html>
